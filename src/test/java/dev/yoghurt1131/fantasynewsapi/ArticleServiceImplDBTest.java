@@ -17,7 +17,7 @@ public class ArticleServiceImplDBTest extends FantasyNewsApiApplicationDBTests {
     @Autowired
     ReactiveMongoTemplate reactiveMongoTemplate;
 
-    @MongoImport(filename = "article_service_init.json", collection = "articles")
+    @TestMongoImport(filename = "article_service_init.json", collection = "articles")
     @Test
     void test_getTopArticles() {
         ArticleService target = new ArticleServiceImpl(reactiveMongoTemplate);

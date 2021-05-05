@@ -14,7 +14,6 @@ import org.junit.jupiter.api.extension.ReflectiveInvocationContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 public class MongoDBImportInterceptor implements InvocationInterceptor {
@@ -23,11 +22,11 @@ public class MongoDBImportInterceptor implements InvocationInterceptor {
 
     @Override
     public void interceptTestMethod(Invocation<Void> invocation, ReflectiveInvocationContext<Method> invocationContext, ExtensionContext extensionContext) throws Throwable {
-        MongoImport mongoImport = invocationContext.getExecutable().getAnnotation(MongoImport.class);
+        TestMongoImport mongoImport = invocationContext.getExecutable().getAnnotation(TestMongoImport.class);
         if(mongoImport != null) {
             String filename = mongoImport.filename();
             String collection = mongoImport.collection();
-            LOGGER.debug("Import test file to embedded Mongo DB. Filename={}, Collection={}", filename, collection);
+            LOGGER.info("Import test file to embedded Mongo DB. Filename={}, Collection={}", filename, collection);
             String jsonFile = "src/test/resources/" + filename;
             IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder()
                     .version(Version.Main.PRODUCTION)
@@ -43,7 +42,7 @@ public class MongoDBImportInterceptor implements InvocationInterceptor {
             // import execute
             MongoImportProcess mongoImportProcess = mongoImportExecutable.start();
             mongoImportProcess.stop();
-            LOGGER.debug("Import finished.");
+            LOGGER.info("Import finished.");
         }
         InvocationInterceptor.super.interceptTestMethod(invocation, invocationContext, extensionContext);
     }
