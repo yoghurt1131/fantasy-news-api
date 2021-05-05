@@ -19,8 +19,8 @@ public class TestApplication {
     @Primary
     @Bean
     public ReactiveMongoTemplate testReactiveMongoTemplate() {
-        MongoClient mongoClient = MongoClients.create(new ConnectionString("mongodb://localhost:9999"));
-        ReactiveMongoTemplate reactiveMongoTemplate = new ReactiveMongoTemplate(mongoClient, "test");
+        MongoClient mongoClient = MongoClients.create(new ConnectionString(String.format("mongodb://%s:%d", TestMongoDB.hostname(), TestMongoDB.port())));
+        ReactiveMongoTemplate reactiveMongoTemplate = new ReactiveMongoTemplate(mongoClient, TestMongoDB.dbname());
         return reactiveMongoTemplate;
     }
 }

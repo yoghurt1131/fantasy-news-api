@@ -20,10 +20,9 @@ abstract class FantasyNewsApiApplicationDBTests {
 	@BeforeAll
 	public static void setupDB() throws Exception {
 		MongodStarter mongodStarter = MongodStarter.getDefaultInstance();
-		int port = 9999;//Network.getFreeServerPort();
 		IMongodConfig mongodConfig = new MongodConfigBuilder()
 				.version(Version.Main.PRODUCTION)
-				.net(new Net(port, Network.localhostIsIPv6()))
+				.net(new Net(TestMongoDB.port(), Network.localhostIsIPv6()))
 				.build();
 		mongodExecutable = mongodStarter.prepare(mongodConfig);
 		MongodProcess mongod = mongodExecutable.start();
