@@ -1,14 +1,12 @@
 package dev.yoghurt1131.fantasynewsapi.resolver;
 
+import dev.yoghurt1131.fantasynewsapi.graphql.ArticleCategory;
 import dev.yoghurt1131.fantasynewsapi.graphql.payload.ArticlePayload;
 import dev.yoghurt1131.fantasynewsapi.graphql.payload.AuthorPayload;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Slf4j
 public class ArticleQueryResolver implements GraphQLQueryResolver {
@@ -23,7 +21,7 @@ public class ArticleQueryResolver implements GraphQLQueryResolver {
        return Arrays.asList(articlePayload);
    }
 
-   public ArticlePayload getArticleById(UUID id) {
+   public ArticlePayload getArticleById(UUID articleId) {
        log.info("call getArticleById.");
        return new ArticlePayload(UUID.randomUUID(),
                "title", "body", new AuthorPayload("bob"),
@@ -32,5 +30,11 @@ public class ArticleQueryResolver implements GraphQLQueryResolver {
                0, 1);
    }
 
+   public List<ArticlePayload> getArticlesByCategory(ArticleCategory category) {
+       return Collections.emptyList();
+   }
 
+   public List<ArticlePayload> getArticleHistory(UUID articleId) {
+       return Collections.emptyList();
+   }
 }

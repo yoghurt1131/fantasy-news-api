@@ -7,9 +7,9 @@ type Query {
     getArticleById(articleId: ID): Article
 
     # 特定のカテゴリの記事を取得する
-    # getArticlesByCategory(category: Category): [Article]
+    getArticlesByCategory(category: Category): [Article]
 
     # 記事の編集履歴を見る
-    # getArticleHistory(articleId: ID): [Article]
+    getArticleHistory(articleId: ID): [Article]
 
 }
