@@ -1,8 +1,13 @@
 package dev.yoghurt1131.fantasynewsapi.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 
 @Configuration
-public class AppConfig  {
+public class AppConfig  extends AbstractMongoClientConfiguration {
 
+    @Override
+    protected String getDatabaseName() {
+        return "fantasy-news";
+    }
 }
