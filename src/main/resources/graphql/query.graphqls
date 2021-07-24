@@ -1,0 +1,15 @@
+type Query {
+    # 最新の記事一覧を取得する
+    latestArticles(limit: Int = 5): [Article]
+
+    # 特定の記事を取得する/入稿した記事を閲覧する
+    # TODO 一緒にしちゃうと無駄にAuthor情報を取得するような処理が入っちゃう？
+    getArticleById(articleId: ID): Article
+
+    # 特定のカテゴリの記事を取得する
+    # getArticlesByCategory(category: Category): [Article]
+
+    # 記事の編集履歴を見る
+    # getArticleHistory(articleId: ID): [Article]
+
+}

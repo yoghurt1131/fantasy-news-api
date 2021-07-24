@@ -1,0 +1,11 @@
+enum Category {
+   World
+   Politics
+   Tech
+   Science
+   Health
+   Sports
+   Arts
+   Books
+   Food
+}

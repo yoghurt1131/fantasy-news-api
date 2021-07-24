@@ -1,0 +1,8 @@
+type Comment {
+    commentId: ID!,
+    articleId: ID!,
+    body: String!,
+    user: String!,
+    postedAt: String!,
+    comments: [Comment]!,
+}

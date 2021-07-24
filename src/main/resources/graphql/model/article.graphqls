@@ -1,0 +1,12 @@
+type Article {
+    articleId: ID!,
+    title: String!,
+    body: String!,
+    author: Author!,
+    imageUrl: String!,
+    categories: [Category]!,
+    publishedAt: String!,
+    comments: [Comment],
+    pageViews: Int!,
+    version: Int!,
+}

@@ -1,0 +1,44 @@
+type Mutation {
+    # 記事にコメントする
+    postComment(comment: PostCommentInput): Comment
+
+    # 入稿者を登録する
+    createAuthor(author: CreateAuthorInput!): Author
+
+    # 記事を新規入稿する
+    createArticle(article: CreateArticleInput!): Article
+
+    # 記事を編集する
+    editArticle(article: EditArticleInput!): Article
+}
+
+input PostCommentInput {
+    articleId: ID!,
+    commentId: ID!,
+    body: String!
+}
+
+input CreateAuthorInput {
+    name: String!
+}
+
+input CreateArticleInput {
+    title: String!,
+    body: String!,
+    authorId: ID!,
+    authorName: String!,
+    imageUrl: String!,
+    categories: [Category]!,
+    publisheAt: String!,
+}
+
+input EditArticleInput {
+    articleId: ID!,
+    title: String!,
+    body: String!,
+    authorId: ID!,
+    authorName: String!,
+    imageUrl: String!,
+    categories: [Category]!,
+    publisheAt: String!,
+}
