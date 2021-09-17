@@ -1,4 +1,4 @@
-package dev.yoghurt1131.fantasynewsapi.configurations;
+package dev.yoghurt1131.fantasynewsapi.configurations.beanconfig;
 
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.scalar.LocalDateTimeScalar;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.ArticleQueryResolver;
