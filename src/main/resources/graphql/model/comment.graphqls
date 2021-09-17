@@ -3,6 +3,6 @@ type Comment {
     articleId: ID!,
     body: String!,
     user: String!,
-    postedAt: String!,
+    postedAt: LocalDateTime!,
     comments: [Comment]!,
 }

@@ -1,7 +1,8 @@
-package dev.yoghurt1131.fantasynewsapi.graphql.payload;
+package dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload;
 
-import dev.yoghurt1131.fantasynewsapi.graphql.ArticleCategory;
+import dev.yoghurt1131.fantasynewsapi.domain.Category;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,8 +12,8 @@ public record ArticlePayload(
         String body,
         AuthorPayload author,
         String imageUrl,
-        List<ArticleCategory> categories,
-        String publishedAt,
+        List<Category> categories,
+        LocalDateTime publishedAt,
         List<CommentPayload> comments,
         int pageViews,
         int version

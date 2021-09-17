@@ -5,7 +5,7 @@ type Article {
     author: Author!,
     imageUrl: String!,
     categories: [Category]!,
-    publishedAt: String!,
+    publishedAt: LocalDateTime!,
     comments: [Comment],
     pageViews: Int!,
     version: Int!,

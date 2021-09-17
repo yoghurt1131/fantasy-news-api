@@ -29,7 +29,7 @@ input CreateArticleInput {
     authorName: String!,
     imageUrl: String!,
     categories: [Category]!,
-    publisheAt: String!,
+    publishAt: LocalDateTime!,
 }
 
 input EditArticleInput {
@@ -40,5 +40,5 @@ input EditArticleInput {
     authorName: String!,
     imageUrl: String!,
     categories: [Category]!,
-    publisheAt: String!,
+    publisheAt: LocalDateTime!,
 }

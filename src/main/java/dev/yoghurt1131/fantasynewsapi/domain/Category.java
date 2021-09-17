@@ -1,6 +1,6 @@
-package dev.yoghurt1131.fantasynewsapi.graphql;
+package dev.yoghurt1131.fantasynewsapi.domain;
 
-public enum ArticleCategory {
+public enum Category {
     World(1),
     Politics(2),
     Tech(3),
@@ -13,7 +13,7 @@ public enum ArticleCategory {
 
     private int id;
 
-    private ArticleCategory(int id) {
+    private Category(int id) {
         this.id = id;
     }
 }

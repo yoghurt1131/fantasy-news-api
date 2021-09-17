@@ -1,3 +1,4 @@
 type Author {
+    authorId: ID!,
     name: String!
 }
