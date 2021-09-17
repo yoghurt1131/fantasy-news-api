@@ -10,11 +10,11 @@ import java.util.UUID;
 
 @Builder
 @Data
-@Document
+@Document(collection = "author")
 public class AuthorDbRecord {
 
     @Id
-    UUID id;
+    String id;
 
     String name;
 
