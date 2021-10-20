@@ -1,4 +1,4 @@
-package dev.yoghurt1131.fantasynewsapi.application;
+package dev.yoghurt1131.fantasynewsapi.application.usecase;
 
 import dev.yoghurt1131.fantasynewsapi.domain.Category;
 import dev.yoghurt1131.fantasynewsapi.domain.Article;

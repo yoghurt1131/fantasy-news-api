@@ -3,7 +3,7 @@ package dev.yoghurt1131.fantasynewsapi.configurations.beanconfig;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.scalar.LocalDateTimeScalar;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.ArticleQueryResolver;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.FantasyNewsApiMutationResolver;
-import dev.yoghurt1131.fantasynewsapi.application.NewsPublishUsecase;
+import dev.yoghurt1131.fantasynewsapi.application.usecase.publish.NewsPublishUsecase;
 import graphql.schema.GraphQLScalarType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

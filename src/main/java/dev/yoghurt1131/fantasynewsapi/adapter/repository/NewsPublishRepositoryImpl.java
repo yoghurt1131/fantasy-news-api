@@ -7,14 +7,11 @@ import dev.yoghurt1131.fantasynewsapi.infrastructure.database.input.AuthorDbReco
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.Optional;
-import java.util.UUID;
 
-@Repository
 public class NewsPublishRepositoryImpl implements NewsPublishRepository {
 
     private final MongoTemplate mongoTemplate;

@@ -1,18 +1,17 @@
-package dev.yoghurt1131.fantasynewsapi.application;
+package dev.yoghurt1131.fantasynewsapi.application.usecase.publish;
 
-import dev.yoghurt1131.fantasynewsapi.adapter.resolver.input.CreateArticleInput;
 import dev.yoghurt1131.fantasynewsapi.adapter.repository.NewsPublishRepository;
+import dev.yoghurt1131.fantasynewsapi.adapter.resolver.input.CreateArticleInput;
 import dev.yoghurt1131.fantasynewsapi.domain.Article;
 import dev.yoghurt1131.fantasynewsapi.domain.ArticleHistory;
 import dev.yoghurt1131.fantasynewsapi.domain.Author;
-import graphql.GraphQLException;
 import graphql.GraphqlErrorException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
+import java.util.UUID;
 
-@Service
 @AllArgsConstructor
 public class NewsPublishUsecaseImpl implements NewsPublishUsecase {
 

@@ -7,7 +7,7 @@ import dev.yoghurt1131.fantasynewsapi.adapter.resolver.input.PostCommentInput;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.ArticlePayload;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.AuthorPayload;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.CommentPayload;
-import dev.yoghurt1131.fantasynewsapi.application.NewsPublishUsecase;
+import dev.yoghurt1131.fantasynewsapi.application.usecase.publish.NewsPublishUsecase;
 import dev.yoghurt1131.fantasynewsapi.domain.Article;
 import dev.yoghurt1131.fantasynewsapi.domain.Author;
 import graphql.kickstart.tools.GraphQLMutationResolver;
