@@ -28,4 +28,5 @@ public class GraphqlResolverConfig {
     public FantasyNewsApiMutationResolver fantasyNewsApiMutationResolver(NewsPublishUsecase publishUsecase) {
         return new FantasyNewsApiMutationResolver(publishUsecase);
     }
+
 }

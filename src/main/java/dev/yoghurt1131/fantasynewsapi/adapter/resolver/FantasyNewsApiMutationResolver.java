@@ -8,6 +8,7 @@ import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.ArticlePayload;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.AuthorPayload;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.CommentPayload;
 import dev.yoghurt1131.fantasynewsapi.application.NewsPublishUsecase;
+import dev.yoghurt1131.fantasynewsapi.domain.Article;
 import dev.yoghurt1131.fantasynewsapi.domain.Author;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import lombok.RequiredArgsConstructor;
@@ -39,6 +40,7 @@ public class FantasyNewsApiMutationResolver implements GraphQLMutationResolver {
                 .id(input.authorId())
                 .name(input.authorName())
                 .build();
+        Article article = publishUsecase.createArticle(input);
         return new ArticlePayload(UUID.randomUUID(),
                 input.title(), input.body(), author.buildPayload(),
                 input.imageUrl(), input.categories(),

@@ -1,13 +1,16 @@
 package dev.yoghurt1131.fantasynewsapi.adapter.resolver;
 
-import dev.yoghurt1131.fantasynewsapi.domain.Category;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.ArticlePayload;
 import dev.yoghurt1131.fantasynewsapi.adapter.resolver.payload.AuthorPayload;
+import dev.yoghurt1131.fantasynewsapi.domain.Category;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 public class ArticleQueryResolver implements GraphQLQueryResolver {
