@@ -7,7 +7,6 @@ import dev.yoghurt1131.fantasynewsapi.domain.ArticleHistory;
 import dev.yoghurt1131.fantasynewsapi.domain.Author;
 import graphql.GraphqlErrorException;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;

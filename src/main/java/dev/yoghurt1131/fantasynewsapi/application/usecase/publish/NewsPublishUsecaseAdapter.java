@@ -27,8 +27,7 @@ public class NewsPublishUsecaseAdapter implements NewsPublishUsecase {
 
     @Override
     public Article createArticle(CreateArticleInput articleInput) {
-        // return resolver.resolve(() -> this.newsPublishUsecase.createArticle(articleInput));
-        return this.newsPublishUsecase.createArticle(articleInput);
+         return resolver.resolve(() -> this.newsPublishUsecase.createArticle(articleInput));
     }
 
     @Override
